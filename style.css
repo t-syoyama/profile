@@ -47,7 +47,13 @@ p {
     padding-left: 15px;
 }
 
-a {
+.changeLang {
+    outline: none;
+    text-decoration: none;
+    color: #ffff;
+}
+
+.outsideLink {
     outline: none;
     text-decoration: none;
     color: #212121;
@@ -56,20 +62,20 @@ a {
     padding-right: 19px;
 }
 
-a:link {
+.outsideLink:link {
     color: #212121;
 }
 
-a:visited {
+.outsideLink:visited {
     color: #484848;
 }
 
-a:focus {
+.outsideLink:focus {
     color: #000000;
     
 }
 
-a:hover {
+.outsideLink:hover {
     color: #000000;
     border-bottom-color: #212121;
     border-bottom-style: solid;
@@ -77,7 +83,7 @@ a:hover {
 
 }
 
-a:active {
+.outsideLink:active {
     background-color: #484848;
     color: #ffff;
 
