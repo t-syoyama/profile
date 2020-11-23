@@ -1,0 +1,84 @@
+body {
+    margin:0;
+    background-color: #e0e0e0;
+    color: #212121;
+}
+h1 {
+    background-color: #a30000;
+    color: #ffff;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+nav {
+    background-color: #dd2c00;
+    color: #ffff;
+    margin: 0;
+    padding: 0px;
+}
+
+.langBox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+}
+.lang {
+    border-bottom-color: #212121;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+}
+
+h2 {
+    background-color: #484848;
+    color: #ffff;
+    margin: 0px;
+    padding-left: 10px;
+}
+
+h3 {
+    padding-left: 10px;
+}
+
+h4 {
+    padding-left: 10px;    
+}
+
+p {
+    padding-left: 15px;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    color: #212121;
+    background: url('https://mdn.mozillademos.org/files/12982/external-link-52.png') no-repeat 100% 0;
+    background-size: 16px 16px;
+    padding-right: 19px;
+}
+
+a:link {
+    color: #212121;
+}
+
+a:visited {
+    color: #484848;
+}
+
+a:focus {
+    color: #000000;
+    
+}
+
+a:hover {
+    color: #000000;
+    border-bottom-color: #212121;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+
+}
+
+a:active {
+    background-color: #484848;
+    color: #ffff;
+
+}
