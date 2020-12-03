@@ -1,8 +1,9 @@
 body {
     margin:0;
-    background-color: #e0e0e0;
+    background-color: #ffff;
     color: #212121;
 }
+
 h1 {
     background-color: #a30000;
     color: #ffff;
@@ -10,8 +11,17 @@ h1 {
     padding: 10px;
     text-align: center;
 }
-nav {
+
+.nav {
     background-color: #dd2c00;
+    color: #ffff;
+    margin: 0;
+    padding: 0px;
+    text-align: center;
+}
+
+.langNav {
+    background-color: #ff6434;
     color: #ffff;
     margin: 0;
     padding: 0px;
@@ -57,9 +67,48 @@ p {
     outline: none;
     text-decoration: none;
     color: #212121;
-    background: url('https://mdn.mozillademos.org/files/12982/external-link-52.png') no-repeat 100% 0;
     background-size: 16px 16px;
     padding-right: 19px;
+}
+
+.facebook:before {
+    content: "";
+    display: inline-block;
+    width: 1em;
+    height: 1rem;
+    background-image: url("../icon/iconmonstr-facebook-6-240.png");
+    background-size: contain;
+    vertical-align: middle;
+}
+
+.pinterest:before {
+    content: "";
+    display: inline-block;
+    width: 1em;
+    height: 1rem;
+    background-image: url("../icon/iconmonstr-pinterest-2-240.png");
+    background-size: contain;
+    vertical-align: middle;
+}
+
+.instagram:before {
+    content: "";
+    display: inline-block;
+    width: 1em;
+    height: 1rem;
+    background-image: url("../icon/iconmonstr-instagram-12-240.png");
+    background-size: contain;
+    vertical-align: middle;
+}
+
+.youtube:before {
+    content: "";
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background-image: url("../icon/iconmonstr-youtube-7-240.png") ;
+    background-size: contain;
+    vertical-align: middle;
 }
 
 .outsideLink:link {
@@ -86,5 +135,32 @@ p {
 .outsideLink:active {
     background-color: #484848;
     color: #ffff;
+
+}
+
+@media screen and (min-width:800px) {
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /*grid-auto-rows: 100px;*/
+        grid-gap: 20px;
+        margin: 10px;
+    }
+
+    .container h2 {
+        text-align: center;
+    } 
+
+    .list {
+        border: 2px solid #484848;
+        color: #212121;
+        background-color: #ffffff;
+    }
+    
+    .listInList {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
 
 }
