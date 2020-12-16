@@ -3,6 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>Simple DOM example</title>
+    <style>
+      .highlight {
+        color: white;
+        background-color: black;
+        padding: 10px;
+        width: 250px;
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
       <section>
@@ -27,7 +36,16 @@
 
           sect.appendChild(linkPara);
 
-          linkPara.parentNode.removeChild(linkPara);
+          //style 1
+          /*
+          para.style.color = "white";
+          para.style.backgroundColor = "black";
+          para.style.padding = "10px";
+          para.style.width = "250px";
+          para.style.textAlign = "center";
+          */
+         //style 2
+         para.setAttribute("class", "highlight");
       </script>
 
   </body>
