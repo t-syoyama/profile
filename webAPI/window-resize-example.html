@@ -24,6 +24,24 @@
     </div>
 
     <script>
+      // get teh references to div element 
+      const div = document.querySelector("div");
+
+      // get a viewport width and height
+      let winWidth = window.innerWidth;
+      let winHeight = window.innerHeight;
+
+      // change div element wodth and height to same as viewport size
+      div.style.width = winWidth + "px";
+      div.style.height = winHeight + "px";
+
+      // Even when window is resized
+      window.onresize = function() {
+        winWidth = window.innerWidth;
+        winHeight = window.innerHeight;
+        div.style.width = winWidth + "px";
+        div.style.height = winHeight + "px";
+      }
 
     </script>
   </body>
