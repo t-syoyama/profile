@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Shopping list example</title>
+    <style>
+      li {
+        margin-bottom: 10px;
+      }
+
+      li button {
+        font-size: 8px;
+        margin-left: 20px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1>My shopping list</h1>
+
+    <div>
+      <label for="item">Enter a new item:</label>
+      <input type="text" name="item" id="item">
+      <button>Add item</button>
+    </div>
+
+    <ul>
+
+    </ul>
+
+    <script>
+      // get some references to the ul, input and button.
+      const listItem = document.querySelector("ul");
+      const textInput = document.querySelector("input");
+      const addButton = document.querySelector("button");
+
+      // function which is run when button is clicked.
+      addButton.onclick = function() {
+
+        // asign the exsist value in the input element.
+        let text = textInput.value;
+
+        // clear the exsit value in the input elelment.
+        textInput.value = "";
+
+        // create element li, span and button.
+        const list = document.createElement("li");
+        const span = document.createElement("span");
+        const delButton = document.createElement("button");
+
+        // append span, delButton on the list.
+        list.appendChild(span);
+        list.appendChild(delButton);
+
+        // asign the inputed text to the span.
+        span.textContent = text;
+        // asign the "delete" to the delBUtton.
+        delButton.textContent = "delete";
+        // append list in the listItem element.
+        listItem.append(list);
+
+        // delete list
+        delButton.onclick = function(e) {
+          listItem.removeChild(list);
+        }
+
+        // focus
+        textInput.focus();
+
+      }
+    </script>
+  </body>
+</html>
