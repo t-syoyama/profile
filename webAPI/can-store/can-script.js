@@ -4,7 +4,7 @@ var products;
 // use fetch to retrieve it, and report any errors that occur in the fetch operation
 // once the products have been successfully loaded and formatted as a JSON object
 // using response.json(), run the initialize() function
-fetch('product.json').then(function(response) {
+fetch('produc.json').then(function(response) {
   if(response.ok) {
     response.json().then(function(json) {
       products = json;
