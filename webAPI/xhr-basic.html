@@ -80,6 +80,7 @@
         // asign arranged text into the variable.
         let url = verse + ".txt";
 
+        // modern method than hmlhttprequest.
         fetch(url).then(function(response) {
           response.text().then(function(text) {
             poemDisplay.textContent = text;
