@@ -58,15 +58,15 @@ window.onload = function() {
             //clear the form and ready to next entry.
             titleInput.value = "";
             bodyInput.value = "";
-            // all is done, report the success of the transaction.
-            transaction.complete = function() {
-                console.log("Transaction completed: Database modification finished.");
-                //run displayData function again.
-                displayData();
-            }
-            transaction.onerror = function() {
-                console.log("Transaction not opened due to error.");
-            }
+        }
+        // all is done, report the success of the transaction.
+        transaction.oncomplete = function() {
+            console.log("Transaction completed: Database modification finished.");
+            //run displayData function again.
+            displayData();
+        }
+        transaction.onerror = function() {
+            console.log("Transaction not opened due to error.");
         }
     }
 
@@ -118,7 +118,7 @@ window.onload = function() {
                 }
                 console.log("Notes all displayed");
             }
-        }
+        };
     }
 
     // define deleteItem() function
@@ -140,7 +140,7 @@ window.onload = function() {
             if (!list.firstChild) {
                 let listItem = document.createElement("li");
                 listItem.textContent = "No notes stored.";
-                list.appendChild("listItem");
+                list.appendChild(listItem);
             }
         }
     }
